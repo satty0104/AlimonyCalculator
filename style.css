@@ -267,7 +267,79 @@ body {
     75% { transform: translateX(5px); }
 }
 
-/* Responsive design */
+/* Navbar styles */
+.navbar {
+    background: white;
+    box-shadow: 0 4px 20px rgba(108, 99, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.75rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.calculator-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    background: var(--gradient);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.2);
+}
+
+.nav-link.active {
+    background: var(--gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.2);
+}
+
+.nav-link i {
+    font-size: 1.2rem;
+}
+
+/* Remove the absolute positioning */
+.nav-link[href="https://satty0104.github.io/CalculateMyDahej/"] {
+    position: static;
+}
+
+/* Adjust container margin for new navbar */
+.container {
+    margin-top: 2rem;
+}
+
+/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     .container {
         margin: 1rem auto;
@@ -279,5 +351,18 @@ body {
     
     .form-section {
         padding: 1.5rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
